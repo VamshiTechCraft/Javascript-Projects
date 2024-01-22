@@ -6,7 +6,6 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let timeInterval;
-
 function startTimer(){
   seconds++;
   if(seconds == 60){
@@ -22,7 +21,6 @@ function startTimer(){
   let h = hours < 10 ? '0'+hours:hours;
   displayTime.innerHTML = `${h} : ${m} : ${s}`;
 }
-
 startBtn.addEventListener('click',()=>{
   timeInterval = setInterval(startTimer,1000);
 })
@@ -30,7 +28,6 @@ pauseBtn.addEventListener('click',()=>{
   clearInterval(timeInterval);
 })
 restartBtn.addEventListener('click',()=>{
-  clearInterval(timeInterval);
   seconds = 0;
   minutes = 0;
   hours = 0;
